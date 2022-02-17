@@ -1,0 +1,43 @@
+{
+  "name": "electron-test-site",
+  "version": "1.0.0",
+  "description": "electron testing field",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder  -w --x64 --ia32"   
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jychpr/electron-testing.git"
+  },
+  "keywords": [],
+  "author": "jychpr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jychpr/electron-testing/issues"
+  },
+  "homepage": "https://github.com/jychpr/electron-testing#readme",
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "electron": "^17.0.1",
+    "electron-builder": "^22.14.13"
+  },
+  "build": {
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    }
+  }  
+}
